@@ -1,0 +1,21 @@
+{
+  "name": "wasm-game-of-life",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "wasm": "wasm-pack build && npm run serve",
+    "build": "webpack",
+    "serve": "webpack-dev-server --mode development "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wasm-tool/wasm-pack-plugin": "^1.6.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "webpack": "5.74.0",
+    "webpack-cli": "4.10.0",
+    "webpack-dev-server": "^4.9.3"
+  }
+}
