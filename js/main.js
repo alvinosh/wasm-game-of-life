@@ -17,6 +17,12 @@ document.addEventListener("keydown", (event) => {
 
 document.addEventListener("mousedown", (event) => {
   dragging = true;
+  let x = Math.floor(event.clientX / 16);
+  let y = Math.floor(event.clientY / 16);
+  if (lastx == x && lasty == y) return;
+  lastx = x;
+  lasty = y;
+  universe.toggle_cell(x, y);
 });
 
 document.addEventListener("mousemove", () => {
@@ -31,6 +37,12 @@ document.addEventListener("mousemove", () => {
 
 document.addEventListener("mouseup", (event) => {
   dragging = false;
+  let x = Math.floor(event.clientX / 16);
+  let y = Math.floor(event.clientY / 16);
+  if (lastx == x && lasty == y) return;
+  lastx = x;
+  lasty = y;
+  universe.toggle_cell(x, y);
 });
 
 const render = () => {
